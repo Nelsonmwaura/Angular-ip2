@@ -1,3 +1,4 @@
+import { ProfileService } from './../http-service/profile.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  profile :any[];
+
+  constructor(private ProfileService:ProfileService) {
+    this.ProfileService.getProfileInfo().subscribe(profile => {
+       console.log(profile);
+       this.profile = profile;
+    });
+   }
 
   ngOnInit(): void {
   }
