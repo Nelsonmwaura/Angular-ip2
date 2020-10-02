@@ -1,3 +1,4 @@
+import { FadeDirective } from './directives/fade.directive';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -18,8 +19,8 @@ import { JoinDateCountPipe } from './join-date-count.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent,NavbarComponent,
-
+    AppComponent, NavbarComponent,
+    FadeDirective,
     ProfileComponent,
     HomeComponent,
     PageNotFoundComponent,
