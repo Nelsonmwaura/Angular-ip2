@@ -1,0 +1,23 @@
+
+> node-sass@4.9.3 install /home/mwaura/Documents/Moringa Core/Angular week2/Angular-ip2/Github-search/node_modules/node-sass
+> node scripts/install.js
+
+Downloading binary from https://github.com/sass/node-sass/releases/download/v4.9.3/linux-x64-64_binding.node
+Download complete
+Binary saved to /home/mwaura/Documents/Moringa Core/Angular week2/Angular-ip2/Github-search/node_modules/node-sass/vendor/linux-x64-64/binding.node
+Caching binary to /home/mwaura/.npm/node-sass/4.9.3/linux-x64-64_binding.node
+
+> node-sass@4.9.3 postinstall /home/mwaura/Documents/Moringa Core/Angular week2/Angular-ip2/Github-search/node_modules/node-sass
+> node scripts/build.js
+
+Binary found at /home/mwaura/Documents/Moringa Core/Angular week2/Angular-ip2/Github-search/node_modules/node-sass/vendor/linux-x64-64/binding.node
+Testing binary
+Binary is fine
++ @angular-devkit/core@10.1.4
+added 1112 packages from 1283 contributors, removed 1 package and audited 1180 packages in 239.305s
+
+1 package is looking for funding
+  run `npm fund` for details
+
+found 1364 vulnerabilities (962 low, 12 moderate, 388 high, 2 critical)
+  run `npm audit fix` to fix them, or `npm audit` for details
