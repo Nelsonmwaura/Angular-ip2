@@ -1,28 +1,47 @@
-<<<<<<< HEAD
-<div *ngIf ="profile">
-   <div class="panel panel-default">
-    <div class="panel-heading">
-       {{profile.name}}<small>({{profle.login}})</small>
-       ,<span *ngIf= "profile.company">Works at {{profile.company}}</span>
-       {{profile.location}} 
-    </div >
-    <div class="paneel-body">
-      <div class="row">
-          <div class="col-sm-3">
-              <img src="{{profile.avatar_url}}"class="img-circle img-responsive" alt="Profile Image">
-            </div>
-         <div class="col-sm-5">
-              <ul class="list-group">
-                  <li class="list-group-items" *ngIf="profile.bio">{{profile.bio}}</li>
-                  <li class="list-group-items" *ngIf="profile.hireable">Available for hire</li>
-                  <li class="list-group-items" *ngIf="profile.bio">{{profile.bio}}</li>
-                  <li class="list-group-items" *ngIf="profile.bio">{{profile.bio}}</li>
-              </ul>
-         </div>
+<div class="container">
+  <ul class="bar">
+    <li>Git-hub Username</li>
+  </ul>
+  <ng-progress></ng-progress>
+
+<div class="form">
+  <form (ngSubmit)='findProfile()' #searchForm='ngForm'>
+       <div class="form-group">
+         <input type="text" class="form-control" placeholder="search  git users with username" [(ngModel)] ="username" name="username" (keyup)="findProfile()">
       </div>
-    </div>
-   </div>
+     </form>
 </div>
-=======
-<p>profile works!</p>
->>>>>>> git
+
+    <div class="row">
+      <div class = "avatar">
+            <img src="{{profile.avatar_url}}" class="avatarimg" alt="image">
+        </div>
+      </div>
+      <div class="row2">
+         <div class="col-sm-6">
+
+            <div class="panel">Profile Name:{{profile.name}}</div><hr>
+            <div class="panel"><a href="{{profile.url}}">Profile Url:{{profile.url}}</a></div><hr>
+            <div class="panel">Profile Bio:{{profile.bio}}</div><hr>
+            <div class="panel">Location:{{profile.location}}</div><hr>
+        </div>
+        <div class="col-sm-6">
+          <ul>
+            <li><label for="Repos"> Repos:{{profile.public_repos}}</label></li><br><hr>
+            <li><label for="followers">Followers:{{profile.followers}}</label></li><br>
+            <li><label for="following">Following:{{profile.following}}</label></li>
+        </ul>
+        <hr>
+            <div class="label label-default">This account was created on {{profile.created_at}}</div>
+            <hr>
+            <div class="label label-default">{{profile.createdDate|joinDateCount}} days ago</div>
+
+         </div>
+       </div>
+
+   <div class="row3">
+    <button class="repo"><a routerLink='/repo' routerLinkActive='active'>Repository name</a></button>
+    <button class="home"><a routerLink='/home' routerLinkActive='active'>  Home  </a></button>
+  </div>
+
+</div>

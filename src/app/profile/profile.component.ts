@@ -1,23 +1,25 @@
-import { ProfileService } from './../http-service/profile.service';
 import { Component, OnInit } from '@angular/core';
+import { GitSearchService } from '../git-search.service';
+import { Profile } from '../profile-class/profile';
+
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
+  providers:[GitSearchService],
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
+  profile:Profile;
+  username:string;
 
-  profile :any[];
-
-  constructor(private ProfileService:ProfileService) {
-    this.ProfileService.getProfileInfo().subscribe(profile => {
-       console.log(profile);
-       this.profile = profile;
-    });
-   }
-
-  ngOnInit(): void {
+  constructor(private GitSearchService:GitSearchService) {
+     }
+  findProfile(){
+  this.GitSearchService.updateProfile(this.username);
+  this.GitSearchService.profileRequest()
+  this.profile=this.GitSearchService.profile
   }
+  ngOnInit() {}
 
 }

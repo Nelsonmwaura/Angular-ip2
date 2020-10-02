@@ -1,0 +1,92 @@
+<div class="container">
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Welcome</span>
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+  <div class="jumbotron">
+  <ul class="bar">
+    <li>Git-hub Search</li>
+  </ul>
+
+
+
+  <div class="sidebar">
+    
+    <div>
+      <hr>
+      <button class="profile"><a routerLink='/profile' routerLinkActive='active'>Profile name</a></button>
+    </div>
+    <div>
+      <hr>
+      <button class="repo"><a routerLink='/repo' routerLinkActive='active'>Repository name</a></button>
+    </div>
+  </div>
+
+  <!-- Page content -->
+  <div class="content">
+    ..
+  </div>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#menu"><button class="profile"><a routerLink='/profile' routerLinkActive='active'>Profile name</a></button></a></li>
+          <li><a href="#about"><button class="repo"><a routerLink='/repo' routerLinkActive='active'>Repository name</a></button></a></li>
+          <li><a href="#contact">CONTACT</a></li>
+          <input type="text" placeholder="Search.." name="search">
+        </ul>
+      </div>
+    </div>
+  </div>
+  </nav>
+
+  <h2></h2>
+<p>Simplicity at its Best</p>
+</div>
+
+
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <h5 class="uppercase general-sub slideanim"></h5>
+      <p class="inline-block slideanim">
+        <br>
+        <br>
+        
+      </p>
+    </div>
+    <article class="col-sm-4 ">
+      <h5 class="uppercase general-sub slideanim">Social</h5>
+      <ul class="list-inline social-links">
+        <li><a target="_blank " href="# "><i class="fa fa-facebook slideanim"></i></a></li>
+        <li><a target="_blank " href="# "><i class="fa fa-twitter slideanim"></i></a></li>
+        <li><a target="_blank " href="# "><i class="fa fa-instagram slideanim"></i></a></li>
+        <li><a target="_blank " href="# "><i class="fa fa-youtube slideanim"></i></a></li>
+      </ul>
+      @2020
+    </article>
+    <div>
+      <li>Phone: +254 70367200</li>
+      <li>Email: Github@gmail.com</li>
+    </div>
+  </div>
+</footer>
+</div>
+<!-- <router-outlet></router-outlet> -->
